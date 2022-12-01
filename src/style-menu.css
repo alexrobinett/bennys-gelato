@@ -18,13 +18,14 @@ html{
 body{
     margin: 0px; 
     display: grid;
-    grid-template-rows: 110px 35% 35% 35% 10%;
+    grid-template-rows: 110px 10fr 100% 250px;
 }
 
 /* Header and Nav */
 
 header{
     display: grid;
+    grid-row: 1/2;
     grid-template-columns: 2fr 2fr 1fr;
     background-color: white;
     margin: 0px;
@@ -108,15 +109,17 @@ button:hover{
 /* section one  */
 
 .section-1{
+    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    background-image: url(/src/gelato-wide.jpg);
+    background-image: url(/src/starberry-gelato.jpg);
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
+    min-height: 40vh;
+    padding: 75px;
 }
 
 h1{
@@ -128,99 +131,34 @@ h1{
     
 }
 
-h1+span{
-    font-size: 4rem;
-    font-weight: 400;
-    font-family: 'poppins';
-    color: white;
-}
-
-
 
 /* section two  */
 .section-2{
     grid-row: 3/4;
     display: grid;
-    grid-column: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
     background-color: rgb(255, 255, 255);
-    align-content: center;
-    justify-content: space-evenly;
 }
 
 h2{
-    font-size: 7rem;
-    font-weight: 900;
-    font-family: 'poppins';
-    color:  #fea3b7;
-    margin: 0px;
+    font-size: 4.5rem;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    grid-column: 1/4;
 }
 
-.menu-items{
+.flavor-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    justify-items: center;
+}
+
+.month-flavors{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
     align-items: center;
-    grid-row: 2/3;
-    width: 40em;
-    justify-self: center;
-}
-
-.menu-items>span{
-    margin-top: 2rem;
-    font-size: 4rem;
-    font-weight: 600;
-    font-family: 'poppins';
-    /* color:  #fea3b7; */
-}
-
-
-.menu-items>p{
-
-    font-size: 2rem;
-    font-weight: 300;
-    font-family: 'poppins';
-}
-
-img{
-    width: 15em;
-}
-
-.headding{
-    grid-column: 1/4;
-    text-align: center;
-    align-self: flex-end;
-}
-
-/* section 3  */
-.section-3{
-    grid-row: 4/5;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 3fr;
-    background-image: url(/src/dark-gelato.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-}
-
-h3{
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: 'poppins';
-    color:  #ebebeb;
-    margin: 8rem 0rem 3rem 8rem;
-}
-
-.section-3>p{
-    font-size: 1.7rem;
-    font-weight:500;
-    font-family: 'poppins';
-    color:  #ebebeb;
-    grid-row: 2/3;
-    margin: 8rem 0rem 3rem 8rem;
-    line-height: 2em;
 }
 
 
@@ -231,7 +169,7 @@ footer{
     grid-template-columns: 1fr 1fr 2fr 1fr;
     grid-template-rows: 3fr 1fr;
     background-color: #fea3b7;
-    grid-row: 5/6
+    grid-row: 4/5
 }
 
 .contact-us>.title{
@@ -363,5 +301,9 @@ footer>a{
     align-self: center;
     justify-self: end;
     margin-right: 8em;
+}
+
+a>img{
+    width: 180px;
 }
 
